@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { View, Image as ImageLogo, Text, TouchableOpacity } from "react-native";
+import styled from 'styled-components';
+import { View, Image as ImageLogo, Text, TouchableOpacity } from 'react-native';
 
 export const Container = styled(View)`
   flex: 1;

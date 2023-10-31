@@ -1,18 +1,18 @@
-import Slider from "@react-native-community/slider";
-import { useState } from "react";
-import Modal from "~/components/Modal";
+import Slider from '@react-native-community/slider';
+import { useState } from 'react';
+import Modal from '~/components/Modal';
 
-import S from "./styles";
+import S from './styles';
 
 const charset =
-  "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+  'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
 
 export default function App() {
   const [size, setSize] = useState(6);
-  const [password, setPassword] = useState("");
+  const [password, setPassword] = useState('');
 
   const handleGeneratePassword = () => {
-    let passwordGenerate = "";
+    let passwordGenerate = '';
 
     for (let i = 0, n = charset.length; i < size; i++) {
       passwordGenerate += charset.charAt(Math.floor(Math.random() * n));
@@ -23,7 +23,7 @@ export default function App() {
 
   return (
     <S.Container>
-      <S.Image source={require("../../assets/logo.png")} />
+      <S.Image source={require('../../assets/logo.png')} />
 
       <S.Title>{size} Caracteres</S.Title>
 

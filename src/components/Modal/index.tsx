@@ -1,5 +1,5 @@
-import React, { FC, ReactElement } from "react";
-import { Text } from "react-native";
+import React, { FC, ReactElement } from 'react';
+import { Text } from 'react-native';
 // import S from "./styles";
 
 interface ModalProps {
