@@ -1,15 +1,17 @@
 import Slider from '@react-native-community/slider';
 import { useState } from 'react';
-import Modal from '~/components/Modal';
+import ModalContent from '~/components/Modal';
+import { Modal } from 'react-native';
 
 import S from './styles';
 
 const charset =
   'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
 
-export default function App() {
-  const [size, setSize] = useState(6);
+export default function Home() {
+  const [size, setSize] = useState(8);
   const [password, setPassword] = useState('');
+  const [isModal, setIsModal] = useState(false);
 
   const handleGeneratePassword = () => {
     let passwordGenerate = '';
@@ -19,6 +21,12 @@ export default function App() {
     }
 
     setPassword(passwordGenerate);
+    setIsModal(true);
+  };
+
+  const handleClose = () => {
+    setIsModal(false);
+    setPassword('');
   };
 
   return (
@@ -30,7 +38,7 @@ export default function App() {
       <S.Area>
         <Slider
           style={{ height: 50 }}
-          minimumValue={6}
+          minimumValue={8}
           maximumValue={20}
           maximumTrackTintColor="#ccc"
           minimumTrackTintColor="#392DE9"
@@ -44,7 +52,9 @@ export default function App() {
         <S.TitleButton>Gerar senha</S.TitleButton>
       </S.Button>
 
-      <Modal value={password} />
+      <Modal visible={isModal} animationType="fade" transparent>
+        <ModalContent value={password} handleClose={handleClose} />
+      </Modal>
     </S.Container>
   );
 }
