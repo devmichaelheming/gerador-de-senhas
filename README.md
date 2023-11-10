@@ -1,8 +1,8 @@
-# Projeto Pet Shop
+# Projeto Gerador de senhas
 
-Aplicativo em React Native para geração de senhas(estudo).
+Bem-vindo ao Gerador de Senhas, um aplicativo simples em React Native desenvolvido para fins de estudo. A aplicação oferece uma maneira fácil e segura de gerar senhas aleatórias, além de armazená-las localmente utilizando o React Native Async Storage.
 
-> Status: Em Andamento ⚠️
+> Status: Finalizado ⚠️
 
 ## Instalação.
 
