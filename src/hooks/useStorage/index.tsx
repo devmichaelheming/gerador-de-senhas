@@ -1,4 +1,5 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { ListPasswordsProps } from '~/screens/Home/Model';
 
 const useStorage = () => {
   const getItem = async (id: string) => {
@@ -12,7 +13,7 @@ const useStorage = () => {
     }
   };
 
-  const saveItem = async (id: string, item: string) => {
+  const saveItem = async (id: string, item: ListPasswordsProps) => {
     try {
       let passwords = await getItem(id);
 
@@ -28,8 +29,8 @@ const useStorage = () => {
     try {
       let passwords = await getItem(id);
 
-      let myPasswords = passwords.filter((password: string) => {
-        return password !== item;
+      let myPasswords = passwords.filter((el: ListPasswordsProps) => {
+        return el.password !== item;
       });
 
       await AsyncStorage.setItem(id, JSON.stringify(myPasswords));
