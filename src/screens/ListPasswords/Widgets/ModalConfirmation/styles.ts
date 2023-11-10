@@ -10,7 +10,7 @@ export const Container = styled(View)`
 
 export const Content = styled(View)`
   background-color: #fff;
-  width: 85%;
+  width: 70%;
   padding: 24px 0;
   align-items: center;
   justify-content: center;
@@ -18,9 +18,11 @@ export const Content = styled(View)`
 `;
 
 export const Title = styled(Text)`
-  font-size: 22px;
-  font-weight: bold;
-  margin-bottom: 24px;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 18px;
+  width: 80%;
+  text-align: center;
 `;
 
 export const ContentPassword = styled(Pressable)`
@@ -58,14 +60,14 @@ export const ButtonSave = styled(TouchableOpacity)`
 `;
 
 export const TitleButtonSave = styled(Text)`
-  font-size: 18px;
+  font-size: 16px;
   color: #fff;
   text-align: center;
   font-weight: 600;
 `;
 
 export const TitleButtonBack = styled(Text)`
-  font-size: 18px;
+  font-size: 16px;
   color: #000;
   text-align: center;
   font-weight: 600;

@@ -1,5 +1,6 @@
-import styled from 'styled-components';
+import styled from 'styled-components/native';
 import { View, Image as ImageLogo, Text, TouchableOpacity } from 'react-native';
+import { OptionsFeedbackSecurityProps } from './Model';
 
 export const Container = styled(View)`
   flex: 1;
@@ -42,6 +43,32 @@ export const TitleButton = styled(Text)`
   color: #fff;
 `;
 
+export const TitleCheck = styled(Text)`
+  font-weight: 600;
+  font-size: 16px;
+  color: #262626;
+  padding-bottom: 8px;
+`;
+
+export const ContentCheckBox = styled(View)`
+  width: 80%;
+  padding: 14px 0 22px 0;
+`;
+
+export const FeedbackSecurity = styled(View)<OptionsFeedbackSecurityProps>`
+  width: 80%;
+  background-color: ${({ color }) => color};
+  padding: 6px 0px;
+  border-radius: 4px;
+  align-items: center;
+`;
+
+export const TextFeedback = styled(Text)`
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+`;
+
 export default {
   Container,
   Image,
@@ -49,4 +76,8 @@ export default {
   Area,
   TitleButton,
   Button,
+  TitleCheck,
+  ContentCheckBox,
+  FeedbackSecurity,
+  TextFeedback,
 };

@@ -22,9 +22,23 @@ export const List = styled(FlatList)`
   padding-top: 14px;
 `;
 
+export const EmptyContent = styled(View)`
+  flex: 1;
+  padding-top: 18px;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const EmptyTitle = styled(Text)`
+  font-size: 20px;
+  color: #969696;
+`;
+
 export default {
   Header,
   Title,
   Content,
   List,
+  EmptyContent,
+  EmptyTitle,
 };
